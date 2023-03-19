@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="8dp"
+        android:id="@+id/card"
+>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/cardview_background"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/bin_scheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/scheme_network"
+            android:textColor="@color/white"
+            android:textColorHint="#207A6B"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_scheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bin_scheme" />
+
+        <TextView
+            android:id="@+id/binBrand"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/brand"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_scheme" />
+
+        <TextView
+            android:id="@+id/item_brand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/binBrand"
+            android:layout_marginLeft="16dp" />
+
+
+        <TextView
+            android:id="@+id/binType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12sp"
+            android:text="@string/type"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/bin_scheme"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="122sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/item_scheme"
+            app:layout_constraintTop_toBottomOf="@+id/binType" />
+
+        <TextView
+            android:id="@+id/binPrepaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="82sp"
+            android:layout_marginTop="8sp"
+            android:text="@string/prepaid"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/binBrand"
+            app:layout_constraintTop_toBottomOf="@+id/item_type" />
+
+        <TextView
+            android:id="@+id/item_prepaid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="120dp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/item_brand"
+            app:layout_constraintTop_toBottomOf="@+id/binPrepaid" />
+
+        <TextView
+            android:id="@+id/binCountry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35sp"
+            android:layout_marginTop="8sp"
+            android:text="@string/country"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/item_prepaid" />
+
+        <TextView
+            android:id="@+id/item_country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/bin_card_luhn"
+            app:layout_constraintTop_toBottomOf="@+id/binCountry" />
+
+        <TextView
+            android:id="@+id/binBank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50sp"
+            android:text="@string/bank"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/binType"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_bank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/item_type"
+            app:layout_constraintTop_toBottomOf="@+id/binBank" />
+
+        <TextView
+            android:id="@+id/item_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:autoLink="web"
+            android:textColor="@color/purple_500"
+            app:layout_constraintStart_toEndOf="@+id/binPrepaid"
+            app:layout_constraintTop_toBottomOf="@+id/item_bank" />
+
+        <TextView
+            android:id="@+id/item_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:autoLink="phone"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/item_prepaid"
+            app:layout_constraintTop_toBottomOf="@+id/item_url" />
+
+        <Button
+            android:id="@+id/item_delete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_delete_forever"
+            android:clickable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="8sp"
+            android:text="@string/card_number"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_brand" />
+
+        <TextView
+            android:id="@+id/bin_card_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="8sp"
+            android:text="@string/length"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/item_card_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bin_card_length" />
+
+        <TextView
+            android:id="@+id/bin_card_luhn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="8sp"
+            android:text="@string/luhn"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@+id/bin_card_length"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/item_card_luhn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40sp"
+            android:layout_marginTop="@dimen/text_view_text_margin_top"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/item_card_length"
+            app:layout_constraintTop_toBottomOf="@+id/bin_card_luhn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
